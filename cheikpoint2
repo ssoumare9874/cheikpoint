@@ -1,0 +1,58 @@
+// Fonction pour inverser une chaîne
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+// Fonction pour compter le nombre de caractères d'une chaîne
+function countCharacters(str) {
+    return str.length;
+}
+
+// Fonction pour mettre en majuscule la première lettre de chaque mot
+function capitalizeWords(sentence) {
+    return sentence.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
+// Fonction pour trouver la valeur maximale d'un tableau
+function findMax(arr) {
+    return Math.max(...arr);
+}
+
+// Fonction pour trouver la valeur minimale d'un tableau
+function findMin(arr) {
+    return Math.min(...arr);
+}
+
+// Fonction pour calculer la somme d'un tableau
+function sumArray(arr) {
+    return arr.reduce((acc, curr) => acc + curr, 0);
+}
+
+// Fonction pour filtrer un tableau en fonction d'une condition
+function filterArray(arr, condition) {
+    return arr.filter(condition);
+}
+
+// Fonction pour calculer la factorielle d'un nombre
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+}
+
+// Fonction pour vérifier si un nombre est premier
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+// Fonction pour générer la suite de Fibonacci
+function fibonacci(n) {
+    let sequence = [0, 1];
+    for (let i = 2; i < n; i++) {
+        sequence.push(sequence[i - 1] + sequence[i - 2]);
+    }
+    return sequence.slice(0, n);
+}
